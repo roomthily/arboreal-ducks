@@ -1,0 +1,14 @@
+color sets
+
+red: #823125
+mustard: #CB9B4E
+grey: #85949A
+blue: #5172A4
+sand: #BEAC94
+purple: #575471
+dark sand: #A0743A
+green: #71825D
+dark green: #A1783B
+
+
+light purple: #9FA2B5

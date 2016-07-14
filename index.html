@@ -13,75 +13,171 @@
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
+
+            @font-face{ 
+              font-family: 'Cooper Hewitt Bold';
+              src: url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Bold.eot');
+              src: url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Bold.eot?#iefix') format('embedded-opentype'),
+                   url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Bold.woff') format('woff'),
+                   url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Bold.ttf') format('truetype'),
+                   url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Bold.svg#webfont') format('svg');
+            }
+            @font-face{ 
+              font-family: 'Cooper Hewitt';
+              src: url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Book.eot');
+              src: url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Book.eot?#iefix') format('embedded-opentype'),
+                   url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Book.woff') format('woff'),
+                   url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Book.ttf') format('truetype'),
+                   url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Book.svg#webfont') format('svg');
+            }
+            @font-face{ 
+              font-family: 'Cooper Hewitt Thin';
+              src: url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Thin.eot');
+              src: url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Thin.eot?#iefix') format('embedded-opentype'),
+                   url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Thin.woff') format('woff'),
+                   url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Thin.ttf') format('truetype'),
+                   url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Thin.svg#webfont') format('svg');
+            }
+            @font-face{ 
+              font-family: 'Cooper Hewitt Light';
+              src: url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Light.eot');
+              src: url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Light.eot?#iefix') format('embedded-opentype'),
+                   url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Light.woff') format('woff'),
+                   url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Light.ttf') format('truetype'),
+                   url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Light.svg#webfont') format('svg');
+            }
+
             body {
-                padding-top: 50px;
+                /**padding-top: 50px;**/
                 padding-bottom: 20px;
+                font-family: "Cooper Hewitt";
+                background-color: #cfd0da;
+                color: #2A2F34;
+            }
+            
+            .jumbotron {
+                background-color: #85949A;
+                padding-left:50px;
+            }
+            .bottom-offset {
+              border-bottom: 2.5px solid #823125;
+              outline-offset: 20px;
+            }
+            .rotator {
+              padding: 50px 0;
+              margin-bottom:-175px;
+            }
+            .rotator h1 {
+                font-family: "Cooper Hewitt Light";
+                color: #823125;
+                -webkit-transform: rotate(270deg);
+                -moz-transform: rotate(270deg);
+                -o-transform: rotate(270deg);
+                writing-mode: lr-tb;
+                transform-origin: left center;
+
+                margin-top:-65px;
+                margin-left:98px;
+                line-height: 125%;
+            }
+
+            h2 {
+              font-family: "Cooper Hewitt Light";
+              color: #823125;
+            }
+
+            .container {
+              padding:0;
+            }
+            .row {
+                padding:20px;
+                background-color:#fff;
+            }
+
+            .col-center-block {
+                float: none;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .row {
+
+              padding-left:40px;
+              padding-right:40px;
+            }
+
+            .hilma {
+              margin-top:-20px;
+              margin-left:-40px;
+              width:110%;
+              height:50px;
+            }
+
+            footer {
+              margin-top:40px;
             }
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        
+         <!--<link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>-->
     </head>
     <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </nav>
+    
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <div class="jumbotron bottom-offset">
       <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <img src="img/g4155.png" width="50px">
+        <div class="rotator">
+          <h1>ast<br/>clear<br/>text</h1>
+        </div>
       </div>
     </div>
 
     <div class="container">
+        <div class="row">
+          <img class="hilma" src="img/hilma_test_flipped.png">
+            <div class="col-md-6 col-lg-6">
+              <p>Some introductory bit of text about the offerings or sweden or i don't know your straw goat might be on fire? So let's take care of that, if you don't mind terribly.</p>
+            </div>
+        </div>
+        
+        
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
+        <div class="col-md-6">
+          <h2>About</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
+        <div class="col-md-6">
+          <h2>Services</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
        </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
+        <div class="col-md-6">
+          <h2>Services</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
+        <div class="col-md-6">
+          <h2>Another</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+
+        <img class="hilma" src="img/hilma_test_flipped_v.png" style="margin-bottom:-21px;margin-top:35px;">
       </div>
 
-      <hr>
 
       <footer>
-        <p>&copy; Company 2015</p>
+        <p>&copy; 2016 Ast Clear Text</p>
+        <p>Contact</p>
       </footer>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
