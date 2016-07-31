@@ -118,6 +118,29 @@
             footer {
               margin-top:40px;
             }
+
+            ul {
+              list-style-type: none;
+              margin:0;
+              padding:0;
+            }
+
+            li {
+              padding-left:10px;
+            }
+
+            li:before {
+              /**content: '\0489';**/
+              content: '\21AC';
+              padding-right:10px;
+              color:#823125;
+              font-weight:bold;
+              font-size:15pt;
+            }
+
+            ul.no-bullets li:before {
+              content: '';
+            }
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
@@ -147,7 +170,6 @@
             <div class="col-md-6 col-lg-6">
               <p>Clear Text offers text editing and writing coaching for academic texts.</p>
             </div>
-            <p>Jennifer C. Ast, PhD</p>
         </div>
         
         
@@ -174,7 +196,7 @@
         <div class="col-md-6">
           <h2>University Clients</h2>
           <ul class="no-bullets">
-            <li>Uppsala UNiversity, Department of Business Studies (ME, MH, SA)</li>
+            <li>Uppsala University, Department of Business Studies (ME, MH, SA)</li>
             <li>Uppsala, Department of Paleontology (GN)</li>
             <li>Uppsals, Department of Molecular Evolution (KZ)</li>
             <li>Polish Academy of Sciences, Institute of Paleobiology (TS)</li>
