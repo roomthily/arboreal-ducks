@@ -47,6 +47,7 @@
                    url('fonts/CooperHewitt-WebFonts-public/CooperHewitt-Light.svg#webfont') format('svg');
             }
 
+            
             body {
                 /**padding-top: 50px;**/
                 padding-bottom: 20px;
@@ -54,7 +55,36 @@
                 background-color: #cfd0da;
                 color: #2A2F34;
             }
-            
+
+            .responsive-image {
+              width: 100%;
+              position:relative;
+              height:5rem;
+            }
+            .responsive-image::before{
+              content:"";
+              display:block;
+              padding-top:50%;
+            }
+
+            .responsive-image div {
+              position:absolute;
+              top:0px;
+              left:0px;
+              right:0px;
+              bottom:0px;
+            }
+            .responsive-image div img {
+              width:100%;
+              /*height:50%;*/
+            }
+
+            .footer-img {
+              position:absolute;
+              bottom:0;
+            }
+
+
             .jumbotron {
                 /**background-color: #85949A;**/
                 background-color: #98a4a9;
@@ -89,10 +119,14 @@
 
             .container {
               padding:0;
+              width:100%;
             }
             .row {
                 padding:20px;
                 background-color:#fff;
+            }
+            .row:not(responsive-image) {
+              padding-top:4rem;
             }
 
             .col-center-block {
@@ -103,17 +137,19 @@
             }
 
             .row {
-
               padding-left:40px;
               padding-right:40px;
+              margin-left:0;
+              margin-right:0;
             }
 
-            .hilma {
-              margin-top:-20px;
-              margin-left:-40px;
-              width:110%;
-              height:50px;
+            .adjust-header{
+              margin-top: 5rem;
+              margin-left:3rem;
+              /*font-family: "Cooper Hewitt Bold";*/
+              letter-spacing: 0.2em;
             }
+
 
             footer {
               margin-top:40px;
@@ -130,8 +166,7 @@
             }
 
             li:before {
-              /**content: '\0489';**/
-              content: '\21AC';
+              content: '\16DC';
               padding-right:10px;
               color:#823125;
               font-weight:bold;
@@ -165,13 +200,12 @@
     </div>
 
     <div class="container">
-        <div class="row">
-          <img class="hilma" src="img/hilma_test_flipped.png">
-            <div class="col-md-6 col-lg-6">
+      <div class="row responsive-image">
+        <div><img src="img/hilma_test_flipped.png"></div>
+        <div class="col-md-6 col-lg-6 adjust-header">
               <p>Clear Text offers text editing and writing coaching for academic texts.</p>
             </div>
-        </div>
-        
+      </div>
         
       <!-- content -->
       <div class="row">
@@ -211,7 +245,12 @@
           
         </div>
 
-        <img class="hilma" src="img/hilma_test_flipped_v.png" style="margin-bottom:-21px;margin-top:35px;">
+      </div>
+
+      <div class="row responsive-image">
+        <div>
+          <img class="footer-img" src="img/hilma_test_flipped_v.png">
+        </div>
       </div>
 
 
