@@ -12,6 +12,9 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
         <style>
 
             @font-face{ 
@@ -162,7 +165,11 @@
             }
 
             li {
-              padding-left:10px;
+              /*padding-left:10px;*/
+              list-style-position: inside;
+              text-indent:-22px;
+              padding-left: 10px;
+              margin-left:10px;
             }
 
             li:before {
@@ -176,9 +183,39 @@
             ul.no-bullets li:before {
               content: '';
             }
+
+            .btn-default {
+              border:0;
+              background-image:none;
+              -webkit-border-radius: 0;
+              -moz-border-radius: 0;
+              border-radius: 0px;
+              color: #823125;
+              background: #cfd0da;
+              
+              padding: 7px 10px 5px 10px;
+              text-decoration: none;
+              text-shadow:0;
+            }
+
+            .btn-default:hover {
+              background: #98A4A9;
+              text-decoration: none;
+              color:#ffffff;
+              font-weight: normal;
+              text-shadow:none;
+            }
+
+            .btn-default.shift {
+              margin-left:20px;
+            }
+/*
+            .btn-default {
+              margin-left: 20px;
+            }*/
+
         </style>
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         
@@ -216,7 +253,7 @@
             <li>Tutoring for theses and dissertations</li>
             <li>Advising on publishing strategies, writing successful grant proposals, and writing and responding to peer reviews.</li>
           </ul>
-          <p><a class="btn btn-default" href="#" role="button">Rates</a></p>
+          <p><a class="btn btn-default shift" href="#" role="button">Rates</a></p>
         </div>
         <div class="col-md-6">
           <h2>About Me</h2>
@@ -225,24 +262,21 @@
             <li>Experienced collaborator, reviewer, tutor and mentor, and author (~20 peer reviewed papers)</li>
             <li>Specialized in working with academics who do not speak English as their first language</li>
           </ul>
-          <p><a class="btn btn-default" href="#" role="button">About</a></p>
+          <p><a class="btn btn-default shift" href="#" role="button">About</a></p>
        </div>
         <div class="col-md-6">
           <h2>University Clients</h2>
-          <ul class="no-bullets">
-            <li>Uppsala University, Department of Business Studies (ME, MH, SA)</li>
-            <li>Uppsala, Department of Paleontology (GN)</li>
-            <li>Uppsals, Department of Molecular Evolution (KZ)</li>
-            <li>Polish Academy of Sciences, Institute of Paleobiology (TS)</li>
-            <li>Uppsala University, Department of Philosophy (CE)</li>
-          </ul>
+          <p>Uppsala University, Department of Business Studies (ME, MH, SA)</p>
+          <p>Uppsala, Department of Paleontology (GN)</p>
+          <p>Uppsala, Department of Molecular Evolution (KZ)</p>
+          <p>Polish Academy of Sciences, Institute of Paleobiology (TS)</p>
+          <p>Uppsala University, Department of Philosophy (CE)</p>
           <p><a class="btn btn-default" href="#" role="button">References</a></p>
         </div>
         <div class="col-md-6">
           <h2>Contact Me</h2>
           <p>ast@cleartext.se (Jennifer Ast) <br/> www.astcleartext.se</p>
           <p>Uppsala, Sweden <br/> +46 (0)76 307 95 96</p>
-          
         </div>
 
       </div>
