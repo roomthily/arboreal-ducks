@@ -30,6 +30,33 @@ body {
   margin:0;
 }
 
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+    
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
 /** jumbotron **/
 .container .jumbotron {
   background-color: #98a4a9;
@@ -37,6 +64,8 @@ body {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0px;
+  /** for the rotated text, ick **/
+  height: 275px;
 }
 
 /** offsets for the hilmas **/
@@ -54,9 +83,7 @@ body {
     padding:20px;
     background-color:#fff;
 }
-.row:not(responsive-image) {
-  padding-top:4rem;
-}
+
 .col-center-block {
     float: none;
     display: block;
@@ -93,7 +120,6 @@ body {
   bottom:0;
 }
 
-
 .rotator {
   padding: 50px 0;
   margin-bottom:-175px;
@@ -110,6 +136,17 @@ body {
     margin-left:98px;
     line-height: 125%;
 }
+
+.jcontainer p {
+  margin-top: 1.2rem;
+}
+
+.tagline {
+  min-height:100%;
+  display:flex;
+  align-items: center;
+}
+
 h2 {
   font-family: "Cooper Hewitt Light";
   color: #823125;
