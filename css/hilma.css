@@ -192,6 +192,17 @@ li:before {
   padding-bottom:5rem;
 }
 
+/** paragraph styling **/
+p.decorator {
+
+}
+p.indented {
+  padding-left:2.5rem;
+}
+span.highlight {
+  color: #823125;
+}
+
 /** buttons **/
 .btn-default {
   border:0;
@@ -222,7 +233,7 @@ footer .row {
   background-color: #cfd0da;
 }
 footer p {
-  padding-left:2rem;
+  /*padding-left:2rem;*/
 }
 .row.background-reverse {
   background-color:#98a4a9;
