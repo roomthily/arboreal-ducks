@@ -12,85 +12,80 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/hilma.css">
+        <link rel="stylesheet" href="css/hilma_flex.css">
+
     </head>
-    <body>
-      <div class="container">
-        <!-- header -->
-        <div class="jumbotron heading bottom-offset">
-          <div class="logotype col-xs-6 col-sm-6">
-            <img src="img/g4155.png" width="50px">
-            <div>
-              <div class="rotator">
-                <h1>ast<br/>clear<br/>text</h1>
-              </div>
-              <p>Jennifer C. Ast, PhD</p>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 tagline">Clear Text offers text editing and writing coaching for academic texts.</div>
-        </div>
-
-        <!-- top hilma -->
-        <div class="row responsive-image">
-          <div><img class="top" src="img/hilma_test_flipped.png"></div>
-        </div>
-
-        <!-- main content space (white) -->
-        <div class="row main-content">
-          <div class="col-sm-6 col-md-6">
-            <h2>Services</h2>
-            <ul>
-              <li>Editing and proofreading of research papers</li>
-              <li>Tutoring for theses and dissertations</li>
-              <li>Advising on publishing strategies, writing successful grant proposals, and writing and responding to peer reviews.</li>
-            </ul>
-            <p><a class="btn btn-default shift" href="#" role="button">Rates</a></p>
-          </div>
-          
-          <div class="col-sm-6 col-md-6">
-            <h2>University Clients</h2>
-            <p>Uppsala University, Department of Business Studies (ME, MH, SA)</p>
-            <p>Uppsala, Department of Paleontology (GN)</p>
-            <p>Uppsala, Department of Molecular Evolution (KZ)</p>
-            <p>Polish Academy of Sciences, Institute of Paleobiology (TS)</p>
-            <p>Uppsala University, Department of Philosophy (CE)</p>
-            <p><a class="btn btn-default" href="references.html" role="button">References</a></p>
-          </div>
-
-          <div class="col-sm-6 col-md-6">
-            <h2>About Me</h2>
-            <ul>
-              <li>Professionally trained evolutionary biologist (PhD, University of Michigan)</li>
-              <li>Experienced collaborator, reviewer, tutor and mentor, and author (~20 peer reviewed papers)</li>
-              <li>Specialized in working with academics who do not speak English as their first language</li>
-            </ul>
-            <p><a class="btn btn-default shift" href="cv.html" role="button">About</a></p>
-         </div>
-
-          <div class="col-sm-6 col-md-6">
-            <h2>Contact Me</h2>
-            <p>ast@cleartext.se (Jennifer Ast) <br/> www.astcleartext.se</p>
-            <p>Uppsala, Sweden <br/> +46 (0)76 307 95 96</p>
-          </div>
-        </div>
-
-        <!-- bottom hilma -->
-        <div class="row responsive-image">
+    <body class="all">
+      <header>
+        <div class="item logotype">
+          <img src="img/g4155.png" width="50px">
           <div>
-            <img class="bottom" src="img/hilma_test_flipped_v.png">
+            <div class="rotator">
+              <h1>ast<br/>clear<br/>text</h1>
+            </div>
+            
           </div>
         </div>
+        <div class="item">
+          <p class="owner">Jennifer C. Ast, PhD</p>
+          <p class="tagline">Clear Text offers text editing and writing coaching for academic texts.</p>
+        </div>
+      </header>
 
-        <!-- footer -->
-        <footer class="top-offset">
-          <div class="row background-reverse"> 
-            <div class="col-xs-6 col-sm-6"><p>&copy; 2016 Ast Clear Text</p></div>
-            <div class="col-xs-6 col-sm-6"><p>F-skattesedel innehas / Approved for moms (VAT)</p></div>
-          </div>
-        </footer>
-      </div>   
+      <div class="responsive-image top-offset">
+        <div><img class="top" src="img/hilma_test_flipped.png"></div>
+      </div>
+
+      <!-- main content -->
+      <div class="row">
+        <div class="item">
+          <h2>Services</h2>
+          <ul>
+            <li>Editing and proofreading of research papers</li>
+            <li>Tutoring for theses and dissertations</li>
+            <li>Advising on publishing strategies, writing successful grant proposals, and writing and responding to peer reviews.</li>
+          </ul>
+          <p><a class="btn btn-default" href="#" role="button"><span>Rates</span></a></p>
+        </div>
+        
+        <div class="item">
+          <h2>University Clients</h2>
+          <ul>
+            <li>Uppsala University, Department of Business Studies (ME, MH, SA)</li>
+            <li>Uppsala, Department of Paleontology (GN)</li>
+            <li>Uppsala, Department of Molecular Evolution (KZ)</li>
+            <li>Polish Academy of Sciences, Institute of Paleobiology (TS)</li>
+            <li>Uppsala University, Department of Philosophy (CE)</li>
+          </ul>
+          <p><a class="btn btn-default" href="references.html" role="button"><span>References</span></a></p>
+        </div>
+
+        <div class="item">
+          <h2>About Me</h2>
+          <ul>
+            <li>Professionally trained evolutionary biologist (PhD, University of Michigan)</li>
+            <li>Experienced collaborator, reviewer, tutor and mentor, and author (~20 peer reviewed papers)</li>
+            <li>Specialized in working with academics who do not speak English as their first language</li>
+          </ul>
+          <p><a class="btn btn-default" href="cv.html" role="button"><span>About</span></a></p>
+       </div>
+
+        <div class="item">
+          <h2>Contact Me</h2>
+          <p>ast@cleartext.se (Jennifer Ast) <br/> www.astcleartext.se</p>
+          <p>Uppsala, Sweden <br/> +46 (0)76 307 95 96</p>
+        </div>
+      </div>
+
+      <div class="responsive-image">
+        <div>
+          <img class="bottom" src="img/hilma_test_flipped_v.png">
+        </div>
+      </div>
+
+      <footer class="top-offset background-reverse">
+          <div class="item"><p>&copy; 2016 Ast Clear Text</p></div>
+          <div class="item"><p>F-skattesedel innehas / Approved for moms (VAT)</p></div>
+      </footer>
     </body>
 </html>

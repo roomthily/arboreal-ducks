@@ -12,58 +12,67 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/hilma.css">
+        <link rel="stylesheet" href="css/hilma_flex.css">
     </head>
-    <body>
-      <div class="container">
-        <!-- header -->
-        <div class="jumbotron heading bottom-offset">
-          <div class="logotype col-xs-6 col-sm-6">
-            <img src="img/g4155.png" width="50px">
-            <div>
-              <div class="rotator">
-                <h1>ast<br/>clear<br/>text</h1>
-              </div>
-              <p>Jennifer C. Ast, PhD</p>
+
+    <body class="all">
+      <!-- header -->
+      <header>
+        <div class="item logotype">
+          <img src="img/g4155.png" width="50px">
+          <div>
+            <div class="rotator">
+              <h1>ast<br/>clear<br/>text</h1>
             </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 tagline">Clear Text offers text editing and writing coaching for academic texts.</div>
-        </div>
-
-        <!-- top hilma -->
-        <div class="row responsive-image">
-          <div><img class="top" src="img/hilma_test_flipped.png"></div>
-        </div>
-
-        <!-- main content space (white) -->
-        <!-- ADD STUFF HERE -->
-        <div class="row main-content">
-          <!-- for a two column deal -->
-          <div class="col-sm-6 col-md-6">
-           
-          </div>
-          <div class="col-sm-6 col-md-6">
             
           </div>
+        </div>
+        <div class="item">
+          <p class="owner">Jennifer C. Ast, PhD</p>
+          <p class="tagline">Clear Text offers text editing and writing coaching for academic texts.</p>
+        </div>
+      </header>
 
-          <!-- or a one column page -->
-          <div class="col-md-10"></div>
+      <!-- top hilma -->
+      <div class="responsive-image top-offset">
+        <div><img class="top" src="img/hilma_test_flipped.png"></div>
+      </div>
+
+      <!-- main content 
+
+        set for a two column layout until narrowed
+        just keep adding div.item blocks for as many sections
+        you want to have.
+      -->
+      <!-- ADD STUFF HERE -->
+      <div class="row">
+        <div class="item">
+          <h2></h2>
+          <p></p>
+          <!-- button structure -->
+          <p><a class="btn btn-default" href="#" role="button"><span>BUTTON TEXT</span></a></p>
         </div>
 
-        <!-- bottom hilma -->
-        <div class="row responsive-image">
-          <div>
-            <img class="bottom" src="img/hilma_test_flipped_v.png">
-          </div>
+        <div class="item">
+          <h2></h2>
+          <p></p>
+          <!-- button structure -->
+          <p><a class="btn btn-default" href="#" role="button"><span>BUTTON TEXT</span></a></p>
         </div>
+      </div>
 
-        <!-- footer -->
-        <footer class="top-offset">
-          <div class="row background-reverse"> <p>&copy; 2016 Ast Clear Text</p></div>
-        </footer>
-      </div>   
+      <!-- bottom hilma -->
+      <div class="responsive-image">
+        <div>
+          <img class="bottom" src="img/hilma_test_flipped_v.png">
+        </div>
+      </div>
+
+      <!-- footer -->
+      <footer class="top-offset background-reverse">
+          <div class="item"><p>&copy; 2016 Ast Clear Text</p></div>
+          <div class="item"><p>F-skattesedel innehas / Approved for moms (VAT)</p></div>
+      </footer>
     </body>
+    
 </html>
