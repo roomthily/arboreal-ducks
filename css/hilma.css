@@ -1,3 +1,5 @@
+/** http://codepen.io/anon/pen/WRvRGM?editors=1100 **/
+
 @font-face{ 
   font-family: 'Cooper Hewitt';
   src: url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-Book.eot');
@@ -14,144 +16,229 @@
        url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-Light.ttf') format('truetype'),
        url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-Light.svg#webfont') format('svg');
 }
+@font-face{ 
+  font-family: 'Cooper Hewitt Medium';
+  src: url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-Medium.eot');
+  src: url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-Medium.woff') format('woff'),
+       url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-Medium.ttf') format('truetype'),
+       url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-Medium.svg#webfont') format('svg');
+}
+@font-face{ 
+  font-family: 'Cooper Hewitt Light Italic';
+  src: url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-LightItalic.eot');
+  src: url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-LightItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-LightItalic.woff') format('woff'),
+       url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-LightItalic.ttf') format('truetype'),
+       url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-LightItalic.svg#webfont') format('svg');
+}
+
+/** reset every damn thing **/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, img, dl, dt, dd, ol, ul, li,
+footer, header {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+footer, header {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/**
+carry on
+**/
 
 body {
-    font-family: "Cooper Hewitt";
-    background-color: #cfd0da; /** the light purple grey **/
-    color: #2A2F34;
-    font-size:20px;
+  font-family: "Cooper Hewitt";
+  background-color: #cfd0da; /** the light purple grey **/
+  color: #2A2F34;
+  /*font-size:20px;*/
+  font-size:1.5vw;
+  min-width:310px;
 }
 
-.container {
+.all {
   margin:0;
-  padding:0;
-}
-.row {
-  margin:0;
-}
-.container .jumbotron {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0px;
+  min-height:100vh;
+  width: 100%;
 }
 
-@media only screen and (min-width : 480px) {
-  
-}
-@media only screen and (min-width : 768px) {
+header, footer, .row {
+  display: -webkit-inline-flex;
+  display: inline-flex;
 
-}
-@media only screen and (min-width : 992px) {
-  
-}
-@media only screen and (min-width : 1200px) {
-  
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  -webkit-justify-content: center;
+  justify-content:center;
 }
 
-h2 {
-  font-family: "Cooper Hewitt Light";
-  color: #823125; /** the red **/
+.item {
+  padding:2.5rem;
+  flex:1; /** eq height & width **/
+  flex-basis:100%; /** to catch between sizes **/
 }
-h3 {
-  font-family: "Cooper Hewitt Light";
-  color: #823125;
-}
-ul {
-  list-style-type: none;
-  margin:0;
-  padding:0;
-}
-li {
-  list-style-position: inside;
-  text-indent:-22px;
-  padding-left: 10px;
-  margin-left:10px;
-}
-li:before {
-  content: '\16DC'; /** unicode as list decorator **/
-  padding-right:10px;
-  color:#823125;
-  font-weight:bold;
-  font-size:15pt;
-}
-.container {
-  padding:0;
-  width:100%;
-}
-.row {
-  padding:20px 40px;
-  background-color:#fff;
-  margin-left:0;
-  margin-right:0;
+.item p, .item li {
+  /** size, (max, min font-size), (100% viewport, min vw), (max viewport, min viewport) 
+  starting at 14px for p
+  max: 20px;
+  min:12px;
+
+  min view: 310px;
+  max view: 960px;
+
+  via: https://madebymike.com.au/writing/precise-control-responsive-typography/;
+  **/
+  font-size: calc( 14px + (20 - 12) * ( (100vw - 310px) / ( 960 - 310) ));
+  line-height:1.6em;
+  margin-bottom: 0.6rem;
 }
 
-
-/** header **/
-.heading {
+header{
   background-color: #98a4a9; /** the medium grey **/
-  padding-left:50px;
-  /** for the rotated text, ick **/
-  height: 275px;
+  width:100%;
+  height: auto;
+  border-bottom:2.5px solid #823125;;
+}
+
+footer {
+  width:100%;
+  background-color: #cfd0da;
+  border-top: 2.5px solid #823125;
+}
+
+footer.background-reverse {
+  background-color:#98a4a9;
+}
+
+footer div.item:last-child{
+  padding-bottom:2.5rem;
+  padding-top:1rem;
+}
+footer div.item:not(:last-child) {
+  padding: 1rem 2.5rem 0 2.5rem;
+  margin-top:0;
+  margin-bottom:0;
+}
+
+/** adjusting the footer type size **/
+@media (min-width: 310px) {
+  footer .item p, footer .item li {
+    font-size: calc( 12px + (16 - 10) * ( (100vw - 310px) / ( 960 - 310) ));
+  }
+}
+@media (min-width: 610px) {
+  footer .item p, footer .item li {
+    font-size: calc( 12px + (20 - 10) * ( (100vw - 610px) / ( 960 - 610) ));
+  }
+}
+
+/** adjusting the flex columns **/
+@media (min-width: 310px) {
+  .item {
+    flex-basis:100%;
+  }
+}
+
+@media (min-width: 610px) {
+  .item {
+    flex-basis: 33%;
+  }
 }
 
 /** logotype **/
+.logotype {
+  display:block;
+}
+
 .rotator {
+  display:block;
   padding: 50px 0;
-  margin-bottom:-175px;
+  margin-bottom:-10.5em;
 }
 .rotator h1 {
-  font-family: "Cooper Hewitt Light";
-  color: #823125;
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
   -o-transform: rotate(270deg);
   writing-mode: lr-tb;
   transform-origin: left center;
   line-height: 125%;
+  font-size: 50px;
 }
-@media (min-width: 320px) {
+
+/** responsive logotype **/
+@media (min-width:310px) {
   .rotator h1 {
     margin-top:-65px;
-    margin-left:82px;
-    font-size:50px;
+    margin-left:66px;
+    font-size:40px;
+  }
+  .item.logotype {
+    height:5rem;
+  }
+  .logotype {
+    padding-bottom: 0.5em;
+  }
+  .logotype img {
+    width:40px;
   }
   .logotype p {
-    margin-top: 3rem;
+    margin-top: 4.5rem;
+    margin-bottom:0;
   }
   .tagline {
-    font-size:14px;
+    padding-top:0;
+    padding-bottom: 0;
   }
 }
-@media (min-width: 768px) {
+@media (min-width:610px) {
   .rotator h1 {
-    margin-top:-65px;
+    margin-top:-70px;
     margin-left:96px;
     font-size:63px;
+  }
+  .item.logotype {
+    height:10rem;
   }
   .logotype p {
     margin-top: 1.2rem;
   }
-  .tagline {
-    font-size:20px;
+  .logotype img {
+    width:50px;
   }
-}
-.tagline {
-  min-height:100%;
-  display:flex;
-  align-items: center;
-  max-width:35rem;
 }
 
 /** the hilmas **/
 /** offsets for the hilmas **/
 .top-offset {
-  border-top: 2.5px solid #823125;
   outline-offset: 20px;
   margin-top:30px;
-}
-.bottom-offset {
-  border-bottom: 2.5px solid #823125;
-  outline-offset: 20px;
 }
 
 .responsive-image {
@@ -187,23 +274,89 @@ li:before {
   letter-spacing: 0.2em;
 }
 
-/** content **/
-.main-content {
-  padding-bottom:5rem;
+
+h1, h2, h3, h4 {
+  font-family: "Cooper Hewitt Light";
+  color: #823125; /** the red **/
 }
 
-/** paragraph styling **/
-p.decorator {
+h2 {
+  font-size: calc( 28px + (30 - 20) * ( (100vw - 310px) / ( 960 - 310) ));
+  padding-bottom:0.6em;
+}
+h3 {
+  font-size: calc( 20px + (24 - 18) * ( (100vw - 310px) / ( 960 - 310) ));
+}
 
-}
-p.indented {
-  padding-left:2.5rem;
-}
-span.highlight {
+/** trailing dotted line **/
+h4 {
+  font-size: calc( 16px + (20 - 12) * ( (100vw - 310px) / ( 960 - 310) ));
   color: #823125;
+  position:relative;
+  text-align: left;
+  width:100%;
+  margin-top:0.6em;
+}
+h4 span {
+  background: #cfd0da;
+  padding: 5px 15px;
+  padding-left:0;
+  position: relative;
+  z-index: 1;
+  vertical-align: middle;
+}
+h4:before {
+  border-bottom: 1px dotted #823125;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 45%;
+  width: 100%;
+}
+h4:before {
+  left:0;
+}
+
+p, li {
+  padding: 0.3rem 0;
+  line-height: 125%;
+}
+
+.owner {
+  color: #823125;
+  font-family: "Cooper Hewitt";
+}
+
+ul {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+}
+li {
+  list-style-position: inside;
+  text-indent:-22px;
+  padding-left: 10px;
+  margin-left:10px;
+}
+li:before {
+  content: '\16DC'; /** unicode as list decorator **/
+  padding-right:10px;
+  color:#823125;
+  font-weight:bold;
+  font-size:15pt;
 }
 
 /** buttons **/
+.btn {
+  display: inline-block;
+  margin-bottom:0;
+  font-size:14px;
+  line-height:1.4;
+  text-align:center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
 .btn-default {
   border:0;
   background-image:none;
@@ -217,29 +370,39 @@ span.highlight {
   text-decoration: none;
   text-shadow:0;
 }
-.btn-default:hover {
-  background: #98A4A9;
-  text-decoration: none;
-  color:#ffffff;
-  font-weight: normal;
-  text-shadow:none;
+
+.btn {
+  position:relative;
+  text-align: center;
+  width:100%;
 }
-.btn-default.shift {
-  margin-left:20px;
+.btn span {
+  background:#cfd0da;
+  padding: 5px 15px;
+  position: relative;
+  z-index: 1;
+  vertical-align: middle;
+}
+.btn:before {
+  border-bottom: 1px dotted #98a4a9;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 45%;
+  width: 100%;
+}
+.btn:before {
+  left:0;
 }
 
-/** footer **/
-footer .row {
-  background-color: #cfd0da;
+/** multipart button hover **/
+.btn span:hover {
+  border: 1px dotted #823125; 
 }
-footer p {
-  /*padding-left:2rem;*/
+.btn:hover:before {
+  border-bottom-color:#823125;
 }
-.row.background-reverse {
-  background-color:#98a4a9;
-  height: calc(20vh - 20px);
-}
-
 
 
 
