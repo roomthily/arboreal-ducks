@@ -24,6 +24,14 @@
        url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-Medium.ttf') format('truetype'),
        url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-Medium.svg#webfont') format('svg');
 }
+@font-face{ 
+  font-family: 'Cooper Hewitt Light Italic';
+  src: url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-LightItalic.eot');
+  src: url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-LightItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-LightItalic.woff') format('woff'),
+       url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-LightItalic.ttf') format('truetype'),
+       url('../fonts/CooperHewitt-WebFonts-public/CooperHewitt-LightItalic.svg#webfont') format('svg');
+}
 
 /** reset every damn thing **/
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -108,6 +116,8 @@ header, footer, .row {
   via: https://madebymike.com.au/writing/precise-control-responsive-typography/;
   **/
   font-size: calc( 14px + (20 - 12) * ( (100vw - 310px) / ( 960 - 310) ));
+  line-height:1.6em;
+  margin-bottom: 0.6rem;
 }
 
 header{
@@ -265,16 +275,47 @@ footer div.item:not(:last-child) {
 }
 
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: "Cooper Hewitt Light";
   color: #823125; /** the red **/
 }
 
 h2 {
   font-size: calc( 28px + (30 - 20) * ( (100vw - 310px) / ( 960 - 310) ));
+  padding-bottom:0.6em;
 }
 h3 {
   font-size: calc( 20px + (24 - 18) * ( (100vw - 310px) / ( 960 - 310) ));
+}
+
+/** trailing dotted line **/
+h4 {
+  font-size: calc( 16px + (20 - 12) * ( (100vw - 310px) / ( 960 - 310) ));
+  color: #823125;
+  position:relative;
+  text-align: left;
+  width:100%;
+  margin-top:0.6em;
+}
+h4 span {
+  background: #cfd0da;
+  padding: 5px 15px;
+  padding-left:0;
+  position: relative;
+  z-index: 1;
+  vertical-align: middle;
+}
+h4:before {
+  border-bottom: 1px dotted #823125;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 45%;
+  width: 100%;
+}
+h4:before {
+  left:0;
 }
 
 p, li {
